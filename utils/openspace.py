@@ -31,6 +31,7 @@ class Openspace:
 
     def store(filename):
         #store repartition in .xls
+        """
         with open('repartition.xls', 'w') as f:
-            f.write(f"Table [counter]: {line}\n")
-
+            f.write(f"Table [counter]: ")
+        """

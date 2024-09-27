@@ -1,3 +1,5 @@
+from openspace.py import Openspace.tables
+
 class Seat:
     def __init__(self, free, occupant):
         self.free = True
@@ -13,12 +15,12 @@ class Seat:
 
 class Table():
     def __str__(self):
-        return "test"
+        return ""
 
     def __init__(self):
         self.capacity = 4
         self.seats = []
-        tables_all.append(self)
+        Openspace.tables.append(self)
 
     def has_free_spot(self):
         return self.capacity > len(self.seats)
@@ -28,8 +30,3 @@ class Table():
 
     def left_capacity(self):
         return self.capacity - len(self.seats)
-
-maarten = Seat(True, "Maarten")
-tafel_1 = Table()
-tafel_1.assign_seat(maarten)
-print(maarten)

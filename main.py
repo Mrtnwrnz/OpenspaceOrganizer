@@ -1,13 +1,12 @@
 import table.py
 import openspace.py
-import file_utils.py
 import random
 
-names_all_a = ["Adheeba","Anastasiia", "Basma", "Dhrisya", "Ihor", "Izabela", 
+names_imported = ["Adheeba","Anastasiia", "Basma", "Dhrisya", "Ihor", "Izabela", 
                     "Kelli", "Kevin", "Levin", "Maarten", "Majid", "Minh Duc", "Moustafa", 
                     "Muntadher", "Nicolaas", "Petra", "Rasmita", "Rik", "Soha", "Tom", 
                     "Urson", "Veena", "Wouter", "Yeliz"]
-names_all = random.shuffle(names_all_a)
+names_all = random.shuffle(
 
 # Create 24 empty seats and put them in a list
 seats_all = [Seat() for i in range(23)]
