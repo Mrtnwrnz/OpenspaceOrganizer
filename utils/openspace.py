@@ -1,12 +1,14 @@
-from random import random
-from table.py import Table
-from main.py import seats_all
-from main.py iport seats_names
+import sys
+sys.path.append('../parentdirectory')
+from table import Table
+from parentdirectory.main import seats_all
+from parentdirectory.main import seats_names
 
 class Openspace:
     def __init__(self, number_of_tables):
         # Create 6 empty tables and put them in a list
-        self.tables = [Table() for i in range(number_of_tables)]
+        tables = [Table() for i in range(number_of_tables)]
+        self.tables = tables
         self.number_of_tables = number_of_tables
         
 
@@ -28,10 +30,15 @@ class Openspace:
                 print(seat.occupant)
             counter += 1 
                 
-
+"""
     def store(filename):
         #store repartition in .xls
-        """
+        import pandas as pd
+        #example:
+        df1 = pd.DataFrame([['a', 'b'], ['c', 'd']],
+               index=['row 1', 'row 2'],
+               columns=['col 1', 'col 2'])
+df1.to_excel("output.xlsx")
         with open('repartition.xls', 'w') as f:
             f.write(f"Table [counter]: ")
-        """
+"""
